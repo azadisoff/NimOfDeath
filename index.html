@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Cờ Tử Thần – Misère Nim</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<h1>Cờ Tử Thần</h1>
+
+<div id="board"></div>
+
+<p id="status"></p>
+<p id="timer" hidden></p>          <!-- bộ đếm ngược -->
+
+  <!-- Form nhập nước đi -->
+  <form id="moveForm" autocomplete="off">
+    <label>Hàng:
+      <select id="rowSelect">
+        <option value="0">Hàng 1</option>
+        <option value="1">Hàng 2</option>
+        <option value="2">Hàng 3</option>
+      </select>
+    </label>
+    <label>Số quân:
+      <input type="number" id="takeInput" min="1" value="1">
+    </label>
+    <button>Chơi</button>
+  </form>
+
+<button id="giveUpBtn" hidden>Chấp nhận thua</button> <!-- NEW -->
+
+<div id="starterChoice" style="margin:10px 0">
+    🧠 Ai đi trước?
+    <label><input type="radio" name="starter" value="player" checked> Bạn</label>
+    <label><input type="radio" name="starter" value="ai"> AI</label>
+  </div>
+  
+<button id="restartBtn" hidden>Chơi lại</button>
+
+<hr>
+<div id="rules" style="text-align:left;max-width:600px;margin:20px auto;font-size:14px">
+  <h3>📜 Luật chơi: CỜ TỬ THẦN</h3>
+  <ul>
+    <li>🔢 Bàn cờ gồm 3 hàng với tổng 15 quân: <strong>[7, 5, 3]</strong></li>
+    <li>🧍‍♂️ Hai người chơi (bạn và AI) luân phiên nhau đi</li>
+    <li>🎯 Mỗi lượt chọn <strong>1 hàng</strong> và loại bỏ <strong>tối thiểu 1 quân</strong></li>
+    <li>💣 Ai bắt buộc phải loại <strong>quân cuối cùng</strong> là người <strong>thua cuộc</strong></li>
+    <li>⏰ Khi còn 1 quân, nếu không hành động trong <strong>10 giây</strong> → bị xử thua</li>
+    <li>🔄 Có thể bấm <strong>"Chấp nhận thua"</strong> để kết thúc sớm và chơi lại</li>
+  </ul>
+  <p style="font-style:italic;color:#666">Chiến lược AI dựa trên Misère Nim – đừng để bị dắt mũi!</p>
+</div>
+
+
+</body>
+</html>

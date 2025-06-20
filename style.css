@@ -1,0 +1,9 @@
+body{font-family:system-ui,Arial;padding:20px;max-width:600px;margin:auto;text-align:center}
+h1{margin-bottom:10px}
+#board{display:flex;flex-direction:column;gap:10px;margin:20px 0}
+.row{display:flex;gap:6px;justify-content:center;min-height:30px} /* NEW min-height */
+.token{width:24px;height:24px;border-radius:50%;background:#ff6961}
+button,select,input{padding:6px 10px;margin-left:6px}
+#status{font-weight:bold;margin-top:10px}
+#timer{color:#d11;font-weight:bold}
+
